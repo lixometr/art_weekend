@@ -141,9 +141,9 @@ const buildMarkup = (mode) => (done) => {
     ? pump(
         [
           gulp.src(srcPath("html")),
-          ...(mode === "production"
-            ? [gulpHtmlmin({ collapseWhitespace: true })]
-            : []),
+          // ...(mode === "production"
+          //   ? [gulpHtmlmin({ collapseWhitespace: true })]
+          //   : []),
           gulp.dest(distPath("html", true)),
         ],
         done
@@ -162,9 +162,9 @@ const preBuildMarkup = (mode) => (done) => {
               batch: ["./src/partials"],
             }
           ),
-          ...(mode === "production"
-            ? [gulpHtmlmin({ collapseWhitespace: true })]
-            : []),
+          // ...(mode === "production"
+          //   ? [gulpHtmlmin({ collapseWhitespace: true })]
+          //   : []),
           rename({ extname: ".html" }),
           gulp.dest(distPath("hbs", true)),
         ],
