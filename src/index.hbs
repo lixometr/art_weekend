@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Weekend</title>
+    {{> head}}
+
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    {{#> layout-sidebar}}
+     <div class="stream-block">
+     <h2>Трансляция потоков</h2>
+
+       <div class="stream-items">
+         <a href="#"  class="stream-item">
+           <img src="img/stream_1.jpg" alt="stream">
+           <button href="#" class="btn btn-grey">Смотреть поток 1</button>
+         </a>
+         <a href="#" class="stream-item">
+           <img src="img/stream_2.jpg" alt="stream">
+           <button href="#" class="btn btn-grey">Смотреть поток 1</button>
+
+         </a>
+         <a href="#" class="stream-item">
+           <img src="img/stream_3.jpg" alt="stream">
+           <button href="#" class="btn btn-grey">Смотреть поток 1</button>
+         </a>
+       </div>
+     </div>
+     <div class="propositions-block">
+       <h2>Специальные предложения</h2>
+       <div class="propositions__items">
+         <a href="#" class="propositions__item">
+           <img src="img/propose_1.jpg" alt="image">
+         </a>
+         <a href="#" class="propositions__item">
+           <img src="img/propose_1.jpg" alt="image">
+         </a>
+         <a href="#" class="propositions__item">
+           <img src="img/propose_1.jpg" alt="image">
+         </a>
+       </div>
+     </div>
+    {{/layout-sidebar}}
+  
+
+    {{> foot}}
+
+  </body>
+</html>

@@ -1,0 +1,26 @@
+.btn {
+  padding: 8px 30px;
+  transition: all 0.3s;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  &-grey {
+    background: $secondary;
+    color: white;
+    &:hover {
+      background: $primary;
+    }
+  }
+  &-blue {
+    background: #0BBAD9;
+    color: white;
+    &:hover {
+      background: #089ab4;
+    }
+  }
+}

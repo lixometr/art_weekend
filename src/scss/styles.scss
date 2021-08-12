@@ -1,0 +1,145 @@
+@import "_vars";
+@import "_mixins";
+@import "_reset";
+@import "_button";
+@import "_faq";
+@import "_service";
+@import "_sidebar";
+body {
+  font-family: Roboto, serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1,
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
+  @include md {
+    font-size: 24px;
+  }
+  @include sm {
+    margin-bottom: 25px;
+  }
+}
+
+.layout-sidebar {
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+  main {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    flex: 1;
+    @include md {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @include sm {
+      padding: 0 20px;
+      padding-top: 15px;
+    }
+  }
+}
+
+.stream {
+  &-block {
+    margin-bottom: 60px;
+  }
+  &-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+    margin-top: -20px;
+    @include md {
+      margin: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px;
+    width: calc((100% / 3) - 24px);
+    text-decoration: none;
+    position: relative;
+    @include md {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 32px;
+      max-width: 430px;
+    }
+    img {
+      display: block;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-bottom: 22px;
+      width: 100%;
+      object-fit: cover;
+      height: auto;
+      max-width: 100%;
+      transition: 0.3s;
+      &:hover {
+        filter: brightness(0.6);
+      }
+    }
+  }
+}
+
+.propositions {
+  &-block {
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+    margin-top: -20px;
+    @include md {
+      margin: 0 -7px;
+    }
+    @include sm {
+      margin: 0;
+    }
+  }
+  &__item {
+    margin: 20px;
+    width: calc((100% / 3) - 40px);
+    text-decoration: none;
+    position: relative;
+    @include md {
+      margin: 7px;
+      width: calc((100% / 3) - 14px);
+    }
+    @include sm {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 32px;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #000;
+      transition: 0.3s;
+      opacity: 0;
+      z-index: 20;
+    }
+    &:hover::before {
+      opacity: 0.4;
+    }
+  }
+}
